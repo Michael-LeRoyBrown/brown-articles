@@ -12,6 +12,7 @@ from .models import Article
 class ArticleListView(LoginRequiredMixin, ListView):
     model = Article
     template_name = 'article_list.html'
+    login_url = 'login'
 
 
 class ArticleDetailView(LoginRequiredMixin, DetailView):
